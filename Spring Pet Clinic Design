@@ -1,0 +1,22 @@
+# Spring Pet Clinic Design
+
+Es gibt im System 3 Akteure:
+
+1. Besitzer von Tieren: Hat einen Namen, eine Telefonnummer und ein Set an Tieren (1:n Beziehung)
+2. Tiere: Hat einen Namen, ein Art von Tier und einen Besitzer (n:1 Beziehung)
+3. Doktoren: Haben einen Namen und eine Spezialität
+
+Es gibt im System eine Relation:
+
+1. Termine: Ein Termin hat ein Datum, eine Uhrzeit, einen Besitzer, ein Tier und einen Doktor
+
+Wie werden die Beziehungen abgebildet?
+
+1. Besitzer zu Tiere und Tiere zu Besitzer: Bidirektionale 1:n Beziehung mit Fremdschlüssel in Tier
+2. Termine zu Besitzer, Tier und Doktor: 1:1 Beziehungen mit Fremdschlüsseln in Termin
+
+Technologie Auswahl:
+
+1. In-Memory Datenbank h2
+2. Spring Data JPA zur Persistenz
+3. Thymeleaf zur Darstellung
